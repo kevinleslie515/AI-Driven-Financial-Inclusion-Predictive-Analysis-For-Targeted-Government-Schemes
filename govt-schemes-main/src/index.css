@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  top: 0 !important;
+}
+
+/* Remove Google Translate banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* Remove duplicate "Powered by" lines */
+body > .skiptranslate > div:first-child > span:first-child {
+  display: none !important;
+}
+
+/* Hide Translate text only, keep logo */
+.goog-logo-link span:nth-child(2) {
+  display: none !important;
+}
+
+/* Hide tooltip */
+.goog-tooltip {
+  display: none !important;
+}
+
+/* Container */
+#google_translate_element {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Translate box styling */
+.goog-te-gadget,
+.goog-te-combo {
+  color: white !important;
+  background-color: #1d4ed8 !important;
+  border: 1px solid white !important;
+  border-radius: 6px !important;
+  padding: 6px 12px !important;
+  font-size: 0.875rem !important;
+  font-family: inherit !important;
+  outline: none !important;
+}
+
+/* Option dropdown text */
+.goog-te-combo option {
+  color: black !important;
+}
+
+/* Layout */
+.goog-te-gadget {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  line-height: 1.2;
+}
+
+/* Keep "Powered by Google" logo only */
+.goog-logo-link {
+  font-size: 0.75rem !important;
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+
+/* Remove extra translate links */
+.goog-te-gadget span,
+.goog-te-menu-value span:last-child {
+  display: none !important;
+}
